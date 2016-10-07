@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="110f5267-7484-436f-b664-2ee4597387ac"
+  name="Loggers" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="1b72e107-2647-44aa-9d8c-bad5e3ac64ba"
+        name="Logger"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="e40353b2-bc89-48b7-9949-443c59c29248"
+            name="Log"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a6a332e4-4431-45d4-bbca-6eaa35bc743a"
+                  name="Message message"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a00e4679-7b2c-40a1-b981-6b4f1e20bd8b"
+        name="Statuslogger"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="fd1de85b-d1ea-4adb-be34-530b6dc0c3b9">
+            <interfaceMoniker
+              Id="1b72e107-2647-44aa-9d8c-bad5e3ac64ba"
+              LastKnownName="Logger"
+              LastKnownLocation="Package1_1335.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="aa7025a8-f9b6-4fce-b77a-69a8fd7e3bb3"
+        name="Message"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedAttributes>
+          <property
+            Id="fd897367-36da-428b-ad7c-8161b34b7f3a"
+            name="Content"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="03bf8278-3e8a-4168-89c7-afe6a424ba7c"
+            name="Log"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="53cdae0a-7684-4147-b6e1-e8bc739c1eab"
+                  name="Logger"
+                  direction="In">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="1b72e107-2647-44aa-9d8c-bad5e3ac64ba"
+                      LastKnownName="Logger"
+                      LastKnownLocation="Package1_1335.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c880c195-764a-4307-9d58-7ef70bbd0d89"
+        name="ErrorLogger"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="8f076e4f-04a0-436d-b091-66e7b3a678fe">
+            <interfaceMoniker
+              Id="1b72e107-2647-44aa-9d8c-bad5e3ac64ba"
+              LastKnownName="Logger"
+              LastKnownLocation="Package1_1335.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8bbc2d25-2b60-409f-aac2-596ae055a96d"
+        name="ErrorMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c5a3ce6c-d978-4c08-9b89-6055c9042142"
+        name="StatusMessage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

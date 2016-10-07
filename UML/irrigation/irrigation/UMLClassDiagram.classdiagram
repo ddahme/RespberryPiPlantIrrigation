@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="109b120f-ffd9-4b71-9f2f-272569e410a6" name="UMLClassDiagram" linkedPackageId="d9a09cee-b93a-49a7-b226-45c654130236" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="7f55dad5-a6f9-41ed-8045-4211412cd8e0">
+      <profileInstance Id="84d00706-bf48-4938-881c-413f46e3ed7b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="145822c0-143c-4f07-ac75-832fcc5c1a53">
+      <profileInstance Id="17dad206-c066-48c4-b489-ae7ebe2552de" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a747e0bf-ffb7-4bd6-8538-d9410b29b964" name="Statuslogger" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a00e4679-7b2c-40a1-b981-6b4f1e20bd8b" />
+        <suppliersInternal>
+          <dependency Id="e4717cae-c886-4a28-bbae-389f46c5d77b">
+            <interfaceMoniker Id="31dc6d5e-4e9d-42b9-9cd1-cbfd4155e69f" LastKnownName="Logger" />
+            <elementDefinition Id="fd1de85b-d1ea-4adb-be34-530b6dc0c3b9" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="31dc6d5e-4e9d-42b9-9cd1-cbfd4155e69f" name="Logger" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1b72e107-2647-44aa-9d8c-bad5e3ac64ba" />
+        <ownedOperations>
+          <operation Id="49b43aaf-a133-470f-80e0-b1a3e6342cf0" name="Log" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e40353b2-bc89-48b7-9949-443c59c29248" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1e260b55-1521-4f56-83f6-e7fe8c4ef4f9" name="Message message" direction="In" isUnique="false">
+                  <elementDefinition Id="a6a332e4-4431-45d4-bbca-6eaa35bc743a" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3a823cf7-1ab1-4f46-a459-2f0f758c873b" name="ErrorLogger" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c880c195-764a-4307-9d58-7ef70bbd0d89" />
+        <suppliersInternal>
+          <dependency Id="d72a4b99-fd5c-4584-b14b-dbbd93789454">
+            <interfaceMoniker Id="31dc6d5e-4e9d-42b9-9cd1-cbfd4155e69f" LastKnownName="Logger" />
+            <elementDefinition Id="8f076e4f-04a0-436d-b091-66e7b3a678fe" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="648cf95d-91cb-4af7-b175-58c2a483f810" name="Main" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1f8d80c6-73c4-4601-8e3e-1bf9ca1abb80" />
+        <ownedOperationsInternal>
+          <operation Id="f8586418-7bab-42df-a5e1-33396d814f88" name="Main" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d5ce9f1-f1c6-4b3f-b557-d5fb1d1db732" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="599c71c9-327e-45c6-9a02-2ff5f7941d34" name="StationFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7c7b4040-d602-463b-b727-b46213c02bf9" />
+        <ownedAttributesInternal>
+          <property Id="eaf1536e-8369-4d57-b918-17061d4083bc" name="Stations" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="de44d578-7ac1-4902-b5fa-0e91d8a81cde" name="Lower" value="*">
+                <elementDefinition Id="a178e472-1590-4caa-898b-336707611696" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="535fedc5-9076-4bcd-abda-1e0936bcfdce" name="Upper" value="*">
+                <elementDefinition Id="ad6e83c8-0a53-4bcb-b587-e766a7f1b901" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="eff9fc92-85ec-4b88-83a8-606f850c687f" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="bbd1b6af-7770-4cf1-8651-d0cdb42825ff" name="CreateStations" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="700cd4c1-61ff-4d8b-be11-435f203bdf31" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1f92ef34-c58f-48e6-9a85-2edb904a4e44" name="FileController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cabaddcf-1c58-48ba-bf5e-c881476f6b0a" />
+        <ownedOperationsInternal>
+          <operation Id="e2f574d3-deb5-4cf6-9e66-d95a1bf8bb31" name="GetMoistureForSonde(Sonde sonde)" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="66377ea8-2a09-4fe3-ad44-82ed45327a92" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="bfa5bdb9-75dd-42ec-93e2-138749dfe192" name="Message" isAbstract="false" isLeaf="false" cachedFullName="irrigation::Loggers::Message">
+        <elementDefinition Id="aa7025a8-f9b6-4fce-b77a-69a8fd7e3bb3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dcddd334-6c24-4650-8a53-63f0957b11eb" name="IrrigationStation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ba8257b5-4ae7-4f3d-a99d-5f7bfd861a0f" />
+        <suppliersInternal>
+          <dependency Id="63cde36d-bfc3-4e2a-8f51-a14c1adaaa17">
+            <interfaceMoniker Id="c7490ae7-57e9-4c6c-97b1-02541b6c21a5" LastKnownName="Device" />
+            <elementDefinition Id="c0415a20-6c87-4dfb-808e-9c7787d1fe7f" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="c85ecabb-2bdb-4a46-9ce6-e8398845b79a" isDerived="false" sourceEndRoleName="IrrigationStation" targetEndRoleName="Pump" isLeaf="false" isAbstract="false">
+            <classMoniker Id="eeaf4a53-1178-42ab-b3ba-abc698d9e744" LastKnownName="Pump" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1be1836b-a26e-4062-b7e2-e70d3a68f8f9" name="IrrigationStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="806d0d04-bc8b-4877-a524-2e29de8fad0e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fc608f78-a011-4a81-b143-81425ccc1f94" name="Pump" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5eb47c24-1a05-446f-bb26-ed02b4e81e8b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ea1592e4-7ca5-46ea-9b11-951dc5bf8852" />
+          </association>
+          <association Id="4db8718d-f38f-46e9-b199-670e93ac1cce" isDerived="false" sourceEndRoleName="IrrigationStation" targetEndRoleName="MoistureSensor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="34de6607-97bf-4624-9363-7be1a8673622" LastKnownName="MoistureSensor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4863cdca-c933-4be8-b07d-5943216ad75d" name="IrrigationStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9d0c4d7f-2919-4c38-933b-ff983d3e6345" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f1cac65c-3316-40fe-81ed-065285294b4b" name="MoistureSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="805001ce-6a0b-4991-b998-a766811cd6b8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a51ab2f8-1c43-4a5c-b935-4bab7fbd530d" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="348cf2ac-99cd-49ae-9fd3-5bd5170a4561" name="MoistureSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="471ea75f-af33-4c9b-ad7e-f8ff067ad9df" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="86547487-b31c-4a75-a583-e1a763f32ae7" LastKnownName="MoistureSensor" />
+            </type_NamedElement>
+          </property>
+          <property Id="7cb67d4d-3305-4bc8-bbfd-47a11069ba6c" name="Pump" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="53a06757-ee5c-410d-82be-15a3e1927892" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="436e2ba6-fed1-4cfe-93bd-f96f7708ad90" LastKnownName="Pump" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="aea93c42-d838-42c3-8914-5cc81f9ad595" name="Execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7f3011b7-85c3-4551-a855-456fdb2e177d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d63eaa4e-70cd-42e8-a6e5-59f59a0b1bbe" direction="Return">
+                  <elementDefinition Id="16100ddc-519c-457f-935d-0d6315cc46aa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bfa5bdb9-75dd-42ec-93e2-138749dfe192" LastKnownName="Message" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="eeaf4a53-1178-42ab-b3ba-abc698d9e744" name="Pump" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="21e05895-d5b5-4eb9-9362-43196f58310e" />
+        <suppliersInternal>
+          <dependency Id="d0bdca9d-0f6d-40f7-9a77-62406242ba6c">
+            <interfaceMoniker Id="c7490ae7-57e9-4c6c-97b1-02541b6c21a5" LastKnownName="Device" />
+            <elementDefinition Id="41232e79-9205-40be-9759-cfeefd83dc3a" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="86547487-b31c-4a75-a583-e1a763f32ae7" name="MoistureSensor" isAbstract="false" isLeaf="false" cachedFullName="irrigation::Devices::MoistureSensor">
+        <elementDefinition Id="b2bc2af5-4f46-4d92-abb9-7b206438370d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="436e2ba6-fed1-4cfe-93bd-f96f7708ad90" name="Pump" isAbstract="false" isLeaf="false" cachedFullName="irrigation::Devices::Pump">
+        <elementDefinition Id="21e05895-d5b5-4eb9-9362-43196f58310e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0a480b03-8b8d-4af3-b094-4f835889644b" name="LogController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="78dd2ee6-d645-46a1-b220-198f86c0a454" />
+        <ownedAttributesInternal>
+          <property Id="8af00785-4861-4c0e-b8bd-22c03a8252e9" name="Logger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="3390e7ca-6c72-4bd1-b384-f26aca1451ca" name="Lower" value="*">
+                <elementDefinition Id="6099481b-dd92-4554-9bd6-0e8a8b217ba3" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="fd26d8ea-9751-4791-8c5a-46c41dfdd238" name="Upper" value="*">
+                <elementDefinition Id="3f0b01b5-cdaa-4f01-bef8-5cd43b14e30d" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="003893df-4a78-416c-9365-806df541078b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b3fe9732-89e7-4bf9-8e42-709dffd357ac" LastKnownName="Logger" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b3fe9732-89e7-4bf9-8e42-709dffd357ac" name="Logger" isAbstract="false" isLeaf="false" cachedFullName="irrigation::Loggers::Logger">
+        <elementDefinition Id="1b72e107-2647-44aa-9d8c-bad5e3ac64ba" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="01900bc6-5871-47d8-921f-2aa2fae9d319" name="TankController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="689c0945-1152-4ce4-b1dc-c8c48fc5a0e5" />
+        <ownedAttributesInternal>
+          <property Id="d18e3007-a493-4747-8b26-d2187e11bbbd" name="Tank" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="be68e61f-5bd8-40b2-a29c-e8255e66f3c7" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c7490ae7-57e9-4c6c-97b1-02541b6c21a5" name="Device" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="97e9bb34-1760-4644-8926-e1578126f0cd" />
+        <ownedAttributes>
+          <property Id="d85cfba8-8a8e-4cff-8ac8-ce0d510caa10" name="PortNumber" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4d4af34e-86ec-4384-95dc-47beb52bb955" />
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation Id="a0be4199-3c35-404e-a56d-3892c1491af3" name="Execute" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9889f2f8-4bff-49f8-acf2-0dc34081016b" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b1cb8e23-1c7e-4ddc-9c8d-d7ee798cf045" name="TankStation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8120f2d9-a59c-468d-994a-421910639961" />
+        <suppliersInternal>
+          <dependency Id="9744262f-0937-4959-9db1-e7b9a22b9078">
+            <interfaceMoniker Id="c7490ae7-57e9-4c6c-97b1-02541b6c21a5" LastKnownName="Device" />
+            <elementDefinition Id="fd152a6f-87c3-4140-8c35-0a9941f50cbe" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="23727e95-0e98-44ac-8cc7-ec4412422e9a" isDerived="false" sourceEndRoleName="TankStation" targetEndRoleName="TankSensor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="267d6a76-ca2d-4ce9-941a-ba065d04dcd4" LastKnownName="TankSensor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="76a3dbdc-8338-4a19-b936-ceff7605c444" name="TankStation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="85eba075-86d7-4400-b8f1-d6bc983338d8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d40fa76-438e-4a6c-9f74-769f9e2daade" name="TankSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="b2b90c3e-61cc-4b86-998f-39d721905c07" name="Lower" value="2">
+                      <elementDefinition Id="a7c505ba-84da-4998-8996-0a3a05561f25" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="192d42e8-568e-420d-a06a-28e505743e92" name="Upper" value="2">
+                      <elementDefinition Id="c3d163e1-df9a-4850-9871-d58874a033d3" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a6b2d11d-84a8-4f89-ae4f-3cccad7d5d7f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e9fd69e8-89b8-4cf0-bf2b-332a7c2ca3c1" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="d4f36dc5-b895-4401-8e9e-c04feabd1488" name="FullSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a914f0c7-86ed-4e19-8b84-e2580b53c89a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a51e8fba-3952-4bad-b3cd-6df75381487f" LastKnownName="TankSensor" />
+            </type_NamedElement>
+          </property>
+          <property Id="7b5ee5ae-1904-42f4-8d67-90f2e1d29ed3" name="EmptySensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c5cd567c-2e1f-435b-8c23-0b361d6c8531" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a51e8fba-3952-4bad-b3cd-6df75381487f" LastKnownName="TankSensor" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="cf7bc355-841f-4f02-afe4-42e4d422d5f8" name="Execute" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b452bc2a-dee4-4205-b48d-e2701f4e719e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fea39245-7033-4bc4-ba26-d460e102cee0" direction="Return">
+                  <elementDefinition Id="575df107-74bb-4d4a-a6ea-6e13e9723ad4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bfa5bdb9-75dd-42ec-93e2-138749dfe192" LastKnownName="Message" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a51e8fba-3952-4bad-b3cd-6df75381487f" name="TankSensor" isAbstract="false" isLeaf="false" cachedFullName="irrigation::Devices::TankSensor">
+        <elementDefinition Id="0442da53-e004-4bcb-8128-1294ed235693" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="267d6a76-ca2d-4ce9-941a-ba065d04dcd4" name="TankSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0442da53-e004-4bcb-8128-1294ed235693" />
+        <suppliersInternal>
+          <dependency Id="02c65ef4-34df-47a7-bb3a-863c28cfdf2e">
+            <interfaceMoniker Id="c7490ae7-57e9-4c6c-97b1-02541b6c21a5" LastKnownName="Device" />
+            <elementDefinition Id="0188a0c5-b2f2-4c9c-8208-66d103d5da3a" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="34de6607-97bf-4624-9363-7be1a8673622" name="MoistureSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b2bc2af5-4f46-4d92-abb9-7b206438370d" />
+        <suppliersInternal>
+          <dependency Id="acab063f-d346-453d-8ecf-54bbecd1e1be">
+            <interfaceMoniker Id="c7490ae7-57e9-4c6c-97b1-02541b6c21a5" LastKnownName="Device" />
+            <elementDefinition Id="5e228f47-7e21-421c-a399-a9e91613b852" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d9a09cee-b93a-49a7-b226-45c654130236" name="irrigation">
+    <elementDefinition Id="800a178b-2715-4fbd-afd4-d402bcbf9b64" />
+  </package>
+</logicalClassDesignerModel>
